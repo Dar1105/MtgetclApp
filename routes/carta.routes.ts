@@ -87,7 +87,6 @@ cartaRoutes.put('/:id',(req:Request,res:Response)=>{
 
     cartaRoutes.delete('/', async (req:Request,res:Response)=>{
 
-
         const cartaId =req.query.id;
 
         if(!cartaId){
@@ -104,6 +103,7 @@ cartaRoutes.put('/:id',(req:Request,res:Response)=>{
                 ok:true,
                 msj:"Eliminado correctamente"
             })
+            
         }).catch(err=>{
             return res.json({
             ok:false,
@@ -111,7 +111,6 @@ cartaRoutes.put('/:id',(req:Request,res:Response)=>{
         })
         
     })
-
 
 })
             export default cartaRoutes;
